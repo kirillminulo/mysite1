@@ -1,0 +1,136 @@
+body {
+	background: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ШАПКА С ЛОГО, ФОРМОЙ ПОЛЬЗОВАТЕЛЯ И ГОРИЗОНТАЛЬНЫМ МЕНЮ */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #e5e5e5;
+}
+
+.header .h-logo-form {
+	border-bottom: 2px solid black;
+}
+.header .h-logo-form .h-logo {
+	display: inline-block;
+}
+
+.header .h-logo-form .h-logo a {
+	text-decoration: none;	
+	font-size: 70px;
+	color: black;
+	margin-left: 5px;
+}
+
+.header .h-logo-form .h-form {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+	text-align: right;
+	margin: 10px;
+}
+
+.header .h-logo-form .h-form input{
+	margin-bottom: 2px;
+	size: 20px;
+}
+
+.header .h-logo-form .h-form button{
+	margin-right: 5px;
+	size: 20px;
+}
+
+.header .h-menu ul {
+	padding: 0;
+	margin: 0;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+.header .h-menu ul li{
+	display: inline-block;
+	text-align: center;
+	width: auto;
+	list-style: none;
+	padding: 2px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	margin-left: 2px;
+}
+
+.header .h-menu ul li:hover{
+	background: orange;	
+}
+
+.header .h-menu ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.main {
+	margin-top: 110px;
+	margin-bottom: 50px;
+}
+
+.main .m-content h1{
+	padding-left: 30px;
+}
+
+.main .m-content p{
+	padding: 5px;
+}
+
+.main .m-menu {
+	text-align: center;
+	float: left;	
+	border: 2px solid black;
+	background: #e5e5e5;
+	margin: 5px;
+	padding: 0;
+	width: 100px;
+}
+
+.main .m-menu ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.main .m-menu ul li {
+	display: block;
+	border-top: 2px solid black;
+	list-style: none;
+	margin: 0;
+	padding: 2px 10px;
+}
+	
+/* ПОДВАЛ С КОПИРАЙТОМ*/
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #e5e5e5;
+	border-top: 2px solid black;
+}
+
+footer p {
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+
