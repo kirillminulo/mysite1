@@ -4,8 +4,9 @@
 	<title>MySite</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 </head>
-<body>
+<body id="body">
 	<div class="header">
 		<div class="h-logo-form">
 			<div class="h-logo">
@@ -32,18 +33,34 @@
 			</ul>
 		</div>
 	</div>
-	<div class="main">
+	<div id="main-bg" class="main">
 		<div class="m-menu">
-			<p><b>Menu</b></p>
-			<ul>
-				<li><a href="#">Item 1</a></li>
-				<li><a href="#">Item 2</a></li>
-				<li><a href="#">Item 3</a></li>
-				<li><a href="#">Item 4</a></li>
-				<li><a href="#">Item 5</a></li>
+		<p><b>Menu</b></p>
+			<button onclick="toggle(document.getElementById('sub-menu'))">CLICK BURGER</button>
+			<ul id="sub-menu">
+				<li>
+					<label>Size P: </label>
+					<input type="text" id="input1" value="INT 8 - 24">
+					<button id="okSizeP" onclick="saveSize()">OK</button>
+				</li>
+				<li>
+				<label>Color BG: </label>
+					<input type="color" id="input2" value="#e5e5e5"><button id="okColorBG" onclick="saveBg()">OK</button>
+				</li>
+				<li>
+					<label>Style P: </label>
+					<select name="style" id="style">
+						<option value="0">Times New Roman</option>
+						<option value="1">Arial</option>
+					</select>
+					<button id="okStyleP" onclick="saveStyle()">OK</button>
+				</li>
+				<li>
+					<button id="okDeleteP" onclick="deleteP()">Delete P</button>
+				</li>
 			</ul>
 		</div>
-		<div class="m-content">
+		<div id="content" class="m-content">
 			<h1>Lorem ipsum dolor 1</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit, risus quis dictum tincidunt, sapien massa malesuada ipsum, et pharetra est libero sed mi. Duis non interdum velit, eget pulvinar odio. Maecenas eu malesuada felis, sed pharetra nisi. In in tempor dui. Donec tempor scelerisque magna ut elementum. Fusce cursus neque pellentesque rhoncus vulputate. Quisque placerat neque ut risus volutpat, sed molestie augue ullamcorper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus metus sem, lobortis et iaculis mollis, pharetra sit amet ligula. Fusce ullamcorper elementum ex, et lacinia quam elementum et. Morbi auctor maximus est ut viverra. Praesent venenatis vestibulum bibendum. Proin at est fermentum, venenatis mauris et, blandit mauris. Nam euismod metus sit amet erat semper mattis. Nullam consectetur scelerisque elementum. In eu ex at massa tempus varius. Aliquam pharetra, ipsum at euismod porttitor, eros purus faucibus leo, ut mollis metus tortor vel justo. Praesent et aliquet eros. Cras id mi quis quam condimentum congue. Sed pharetra egestas tortor ac posuere. Aenean sit amet quam commodo, ultricies dolor vel, accumsan purus. Pellentesque auctor ac quam et finibus. Etiam placerat tortor diam. Sed lacus ipsum, rhoncus sit amet posuere id, sodales a orci. In at lacus magna. Nunc ac orci et ipsum fermentum pharetra. Vivamus feugiat eros augue, non viverra metus pretium ut.</p>
 		<h1>Lorem ipsum dolor 2</h1>

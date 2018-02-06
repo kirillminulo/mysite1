@@ -102,11 +102,10 @@ body {
 	background: #e5e5e5;
 	margin: 5px;
 	padding: 0;
-	width: 100px;
 }
 
 .main .m-menu ul {
-	display: block;
+	display: none;
 	margin: 0;
 	padding: 0;
 }
