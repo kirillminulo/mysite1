@@ -1,37 +1,38 @@
-	function toggle(el) {
-		el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+	function displayBlock(elem) {
+		if(elem.style.display == 'none') { 
+			elem.style.display='block'
+		} else {
+			elem.style.display = 'none'
+		}
 	}
 	
-	function saveSize() {
-		var textInput = document.getElementById("input1").value;
-		tagName =  document.querySelectorAll('#content > p');
-		if(textInput>=8 && textInput<=24) {
-			for(var i=0; i<tagName.length; i++) {
-				tagName[i].style.fontSize = textInput + 'px';
+	function saveSize(elem, value) {
+		if(value>=8 && value<=24) {
+			for(var i=0; i<elem.length; i++) {
+				elem[i].style.fontSize = value + 'px'
 			}
 		} else {
-			alert("Size 8 - 24 px | ERROR INPUT: " + textInput);
+			alert("No correct input SIZE TEXT: " + value)
 		}
 	}
 	
-	function saveBg() {
-		var textInput = document.getElementById("input2").value;
-		tagName =  document.querySelector('#main-bg')
-		tagName.style.background = textInput;
-		document.body.background = textInput;
+	function saveBg(elem, value) {
+		elem.style.background = value;
 	}
 	
-	function saveStyle() {
-		var textInput = document.getElementById("style").options.selectedIndex;
-		if (textInput == 0) {		
-			document.getElementById("body").style.fontFamily = "Times New Roman";
+	function saveStyle(elem, value) {
+		if (value == 0) {		
+			for(var i=0; i<elem.length; i++) {
+				elem[i] = "Times New Roman";
+			}
 		} else {
-			document.getElementById("body").style.fontFamily = "Arial";
+			for(var i=0; i<elem.length; i++) {
+				elem[i].style.fontFamily = "Arial";
+			}
 		}
 	}
 	
-	function deleteP() {
-		elem =  document.querySelectorAll('#content > p');
+	function deleteP(elem) {
 		elem=elem[elem.length-1];
 		elem.innerHTML = '';
 	}
